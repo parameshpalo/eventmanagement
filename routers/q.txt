@@ -1,0 +1,17 @@
+Coding Challenge: Event Planning API with User Authentication
+Scenario: Design and code a RESTful API using Django that allows users to manage events they are planning. Users can create events, add attendees, and manage event details. The API should support core operations for managing events, along with user authentication and handling of guest lists. Focus on implementing a clean, scalable, and secure solution.
+Core Requirements:
+
+User Management:
+o    POST /users/register: Register a new user.
+o    POST /users/login: Authenticate a user and return a JWT token.
+Event Management:
+o    POST /events: Create a new event (authenticated users only).
+o    GET /events: Retrieve all events created by the authenticated user.
+o    GET /events/{id}: Retrieve details of a specific event by ID for the authenticated user.
+o    PUT /events/{id}: Update an event’s details (e.g., title, date, location).
+o    DELETE /events/{id}: Soft delete an event (mark it as canceled or archived).
+Guest List Management:
+o    POST /events/{id}/guests: Add a guest to the event’s guest list.
+o    GET /events/{id}/guests: Retrieve the guest list for a specific event.
+o    DELETE /events/{id}/guests/{guest_id}: Remove a guest from the event’s guest list.
